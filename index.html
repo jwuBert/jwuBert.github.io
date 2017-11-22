@@ -3,6 +3,42 @@
 <head>
 	<title>The world for Bert</title>
 	<script src="js/jrj6out.js"></script>
+<!--菜单列表的样式-->
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;text-decoration:none;}
+
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0}
+*html .clearfix{height:1%}
+
+.solution-list{position:relative;height:412px;z-index:9;width:1200px;margin:0 auto;}
+.short-bar{position:absolute;top:187px;left:50%;margin-left:-15px;width:30px;height:3px;background-color:#fff}
+.active .short-bar{top:201px;background-color:#009dff}
+.solution-list ul li{float:left;width:240px;position:relative;height:412px;transition:all .5s;-moz-transition:all .5s;-webkit-transition:all .5s;-o-transition:all .5s}
+.solution-item-wrapper{width:240px;height:412px;background:url(img/solution_item_bg_01.jpg) center no-repeat}
+.solution-item-02{background-image:url(img/solution_item_bg_02.jpg)}
+.solution-item-03{background-image:url(img/solution_item_bg_03.jpg)}
+.solution-item-04{background-image:url(img/solution_item_bg_04.jpg)}
+.solution-item-05{background-image:url(img/solution_item_bg_05.jpg)}
+.active .solution-item-wrapper{position:absolute;z-index:9;top:-62px;left:-51px;width:341px;height:526px;background:url(img/solution_item_bg_active_01.jpg) no-repeat;-webkit-box-shadow:0 5px 40px rgba(0,0,0,.5);-moz-box-shadow:0 5px 40px rgba(0,0,0,.5);box-shadow:0 5px 40px rgba(0,0,0,.5)}
+
+@media only screen and (max-width:1400px){
+  .product-special-li-5.active .solution-item-wrapper{left:-102px}
+}
+.active .solution-item-02{background-image:url(img/solution_item_bg_active_02.jpg)}
+.active .solution-item-03{background-image:url(img/solution_item_bg_active_03.jpg)}
+.active .solution-item-04{background-image:url(img/solution_item_bg_active_04.jpg)}
+.active .solution-item-05{background-image:url(img/solution_item_bg_active_05.jpg)}
+.solution-list ul li p.solution-title{position:absolute;top:211px;width:100%;text-align:center;color:#fff;font-size:18px;z-index:2}
+.solution-list ul li p.solution-intro{position:absolute;top:282px;left:50%;margin-left:-121px;width:242px;overflow:hidden;color:#eee;line-height:2;z-index:2;opacity:0;filter:alpha(opacity=0);font-size:14px;text-align:justify}
+.solution-list ul li a{display:none;position:absolute;top:452px;left:50%;margin-left:-87px;width:174px;height:40px;line-height:40px;text-align:center;font-size:14px;color:#fff;z-index:2;background-color:#0af}
+.solution-list ul li a:hover{background-color:#0099e5;transition:all .6s;-moz-transition:all .6s;-webkit-transition:all .6s;-o-transition:all .6s}
+.solution-list ul li.active p.solution-title{top:158px;font-size:22px}
+.solution-list ul li.active p.solution-intro{top:230px;opacity:1;filter:alpha(opacity=100)}
+.solution-list ul li.active a{top:388px;display:block}
+</style>
+
+<!--背景框架的样式-->
 	<style>
   body {
   position: relative;
@@ -256,28 +292,58 @@ h1 {
 			<div class="left-plane"></div>
 			<div class="right-plane"></div>
 		</div>	
-		<div class="text">I do!</div>
+		<div class="text"><a href="#" onclick="blockDiv()">I do!</a></div>
 	</div>
 </div>
+
+
 <div class="sky-container">
-	<div class="text-right sky-container__left">
-		<h2 class="portfolio">
-			这是一个 只属于我们两个的网站
-		</h2>
-		<h2 class="resurrection">
-			敬请期待...	
-		</h2>
-	</div>
-	<hr>
-	<br><br><br>
-	<div class="text-left sky-container__right">
-		<h2 class="08" id="08">
-			<script type="text/javascript">
-				var myDate =new Date();
-				var now_time=myDate.toLocaleString(); 
-				document.getElementById("08").innerHTML=now_time;
-			</script>
-		</h2>
+<!--	<div class="text-right sky-container__left">-->
+  <div style="height:100px;"></div>
+
+  <div class="solution-list" style="display:none;" id="show_list">
+    <ul id="solutionList" class="clearfix">
+    <li>
+      <div class="solution-item-wrapper solution-item-01">
+        <p class="solution-title">About us</p>
+        <div class="short-bar"></div>
+        <p class="solution-intro">认定的人，姚婷和认定的(经过姚婷同意的)事，就要坚持下去，这就是我们的道。</p>
+        <a href="#">Witness together!</a>
+      </div>
+    </li>
+    <li>
+      <div class="solution-item-wrapper solution-item-02">
+        <p class="solution-title">Photo-SHOW</p>
+        <div class="short-bar"></div>
+        <p class="solution-intro">故事，往往从你我之间的点滴产生，记录下我们在一起的瞬间，很重要</P>
+        <a href="#">Appreciation</a>
+      </div>
+    </li>
+   <li  class="active">
+      <div class="solution-item-wrapper solution-item-03">
+        <p class="solution-title">Log</p>
+        <div class="short-bar"></div>
+        <p class="solution-intro">移动云应用虚拟化系统为客户提供最佳的应用性能及灵活的应用虚拟化服务，帮助客户实现手机、平板电脑等移动设备安全顺畅地访问各种应用软件。</p>
+        <a href="#">查看详情</a>
+      </div>
+    </li>
+    <li>
+      <div class="solution-item-wrapper solution-item-04">
+        <p class="solution-title">Message-Board</p>
+        <div class="short-bar"></div>
+        <p class="solution-intro">电商云帮助电商客户快速实现平台搭建、节约成本、应对业务高并发、强化安全防护能力，助力电商客户快速实现金融创新及业务增收的目标。</p>
+        <a href="#">进入留言区</a>
+      </div>
+    </li>
+    <li class="product-special-li-5">
+      <div class="solution-item-wrapper solution-item-05">
+        <p class="solution-title">Plan</p>
+        <div class="short-bar"></div>
+        <p class="solution-intro">游戏云为客户游戏开发、游戏运营提供专属服务集群；多场景多类型的游戏部署解决方案，同时提供尊贵VIP售后服务，为客户游戏稳定运行提供基石。</p>
+        <a href="#">Do</a>
+      </div>
+    </li>
+  </ul>
 	</div>
 </div>
 
@@ -289,90 +355,28 @@ h1 {
 
 
 
-	<div class="container"> <!--container 展现特殊字-->
-	<section>
-		<ul class="longshadow">
-			<li>
-				<figure><span id="one">I</span></figure>
-			</li>
-			<li>
-				<figure><span id="two">L</span></figure>
-			</li>
-			<li>
-				<figure><span id="three">I</span></figure>
-			</li>
-			<li>
-				<figure><span id="four">K</span></figure>
-			</li>
-			<li>
-				<figure><span id="five">E</span></figure>
-			</li>
-			<li>
-				<figure><span id="six">U</span></figure>
-			</li>																			
-		</ul>
-	</section>
-	</div>
+<script type="text/javascript">
+$(document).ready(function(){
+  
+  var b = $("#solutionList li");
+  b.mouseover(function() {
+    var e = $(this);
+    b.removeClass("active");
+    e.addClass("active")
+  });
 
-	<!--调整container的特殊效果-->
-	<style type="text/css"> 
-			.container:before, footer:before, .longshadow:before, .container:after, footer:after, .longshadow:after {
-	    content: "";
-	    display: table;
-		}
-		.container:after, footer:after, .longshadow:after {
-		    clear: both;
-		}
-		.container {
-		    max-width: 900px;
-		    margin-top: 50px;
-		    margin-left: auto;
-		    margin-right: auto;
-		}
-
-		.longshadow {
-		    padding: 0;
-		}
-		.longshadow li {
-		    display: inline-block;
-		}
-		.longshadow li>figure {
-		    display: inline-block;
-		    text-align: center;
-		    width: 120px;
-		    height: 120px;
-		    border: 1px solid transparent;
-		    border-radius: 20px;
-		    margin: 5px;
-		    overflow: hidden;
-		}
-		.longshadow li:nth-child(1) figure {
-		    background-color: #e96b5e;
-		}
-		.longshadow li:nth-child(2) figure {
-		    background-color: #fbbc85;
-		}
-		.longshadow li:nth-child(3) figure {
-		    background-color: #c3d377;
-		}
-		.longshadow li:nth-child(4) figure {
-		    background-color: #5ea4a4;
-		}
-		.longshadow li:nth-child(5) figure {
-		    background-color: #6dd7b5;
-		}
-		.longshadow li:nth-child(6) figure {
-		    background-color: #8787c4;
-		}
-		.longshadow span {
-		    color: #ffe6d4;
-		    font-size: 91px;
-		    line-height: 1.2;
-		    font-weight: 700;
-		    text-transform: uppercase;
-		}
-	</style>
-
+});
+</script>
+<script type="text/javascript">
+              function blockDiv(){
+               var div = document.getElementById("show_list").style.display;               
+               if(div=='none'){
+                  document.getElementById("show_list").style.display='block';
+                 }else{
+                    document.getElementById("show_list").style.display='none';
+                }
+              }
+             </script>
 	
 </body>
 </html>
